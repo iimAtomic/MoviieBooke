@@ -3,7 +3,7 @@ import { Injectable, BadRequestException, NotFoundException } from '@nestjs/comm
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ReservationDto } from './dtos/reservation.dto';
-import fetch from 'node-fetch';
+
 import { ReservationDocument } from './schemas/reservation.schema';
 
 @Injectable()
