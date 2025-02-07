@@ -49,7 +49,7 @@ export class ReservationsService {
     }
 
     private async getMovieDetails(movieId: number): Promise<{ title: string } | null> {
-        const apiKey = process.env.TMDB_API_KEY; // Utiliser une variable d'environnement pour la clé API
+        const apiKey = process.env.TMDB_API_KEY;
         const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
 
         try {
