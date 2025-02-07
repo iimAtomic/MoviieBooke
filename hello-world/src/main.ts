@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
@@ -14,15 +13,13 @@ async function bootstrap() {
   const server = app.getHttpServer();
   const router = server._events.request._router;
 
-
-  // ✅ Active CORS pour toutes les requêtes
   app.enableCors({
-    origin: '*', // Remplace par le port de ton frontend
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Autorise l'envoi de cookies si nécessaire
+    credentials: true,
   });
 
-  // Configuration de Swagger
+
   const config = new DocumentBuilder()
     .setTitle('Votre API')
     .setDescription("Documentation de l'API")
